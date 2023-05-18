@@ -12,6 +12,7 @@ import Login from './component/Login/Login';
 import Blogs from './component/Blogs/Blogs';
 import SignUp from './component/SignUp/SignUp';
 import AuthProvider from './Providers/AuthProvider';
+import AddAToy from './component/AddAToy/AddAToy';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <SignUp></SignUp>
+      },
+      {
+        path:'/addToy',
+        element:<AddAToy></AddAToy>
       }
     ]
   },
