@@ -9,6 +9,8 @@ import {
 import Main from './Layout/Main';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
+import Blogs from './component/Blogs/Blogs';
+import SignUp from './component/SignUp/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/blog',
+        element:<Blogs></Blogs>
+      },
+      {
+        path:'/signup',
+        element:<SignUp></SignUp>
       }
     ]
   },
