@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import icon from '../../assets/loco.png'
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user)
+    const handelLogOut = () =>{
+        logOut()
+        .then()
+        .catch(error=>console.log(error))
+    }
     const navItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link>All Toy</Link></li>
@@ -17,7 +27,8 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link to="/"><img className="w-24 h-24 rounded-lg" src={icon} alt="" /></Link>
+                <p>thi is name</p>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -25,8 +36,15 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login"><button className="btn btn-outline btn-secondary">Login</button>
-                </Link>
+                { user ? <img className="w-16 rounded-3xl mr-4" src={user.photoURL} alt="" /> : ''
+
+                }
+                {user ? <button onClick={handelLogOut} className="btn btn-outline btn-secondary">Log Out</button> :
+
+                    <Link to="/login"><button className="btn btn-outline btn-secondary">Login</button>
+                    </Link>
+
+                }
             </div>
         </div>
     );

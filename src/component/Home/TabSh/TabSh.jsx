@@ -6,9 +6,9 @@ const TabSh = () => {
         <h2 className='text-3xl font-bold text-center'>Shop By Category</h2>
          <Tabs className="text-center my-5">
         <TabList>
-          <Tab>Title 1</Tab>
-          <Tab>Title 2</Tab>
-          <Tab>Title 3</Tab>
+          <Tab>sports car</Tab>
+          <Tab>mini police car</Tab>
+          <Tab>regular car</Tab>
         </TabList>
     
         <TabPanel>
