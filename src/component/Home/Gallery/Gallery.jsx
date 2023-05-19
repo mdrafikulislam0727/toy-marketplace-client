@@ -10,8 +10,8 @@ const Gallery = () => {
         <div className="carousel w-full h-[300px] my-24">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='flex w-full'>
-                    <img src={gallery1} alt="" className='w-1/2 rounded-xl' />
-                    <img src={gallery2} className="w-1/2 rounded-xl" />
+                    <img src={gallery1} alt="" className='w-1/2' />
+                    <img src={gallery2} className="w-1/2" />
                 </div>
                 <div className="absolute h-full rounded-xl flex items-center left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 pl-12  w-1/2'>
@@ -21,7 +21,7 @@ const Gallery = () => {
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-24 ">
                     <a href="#slide4" className="btn btn-circle mr-5">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+                    <a href="#slide2" className="btn btn-circle">❯ </a>
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">

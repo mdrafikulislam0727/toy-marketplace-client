@@ -16,6 +16,7 @@ const NavBar = () => {
         <li><Link to="/allToy">All Toy</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
         <li><Link to="/addToy">Add Toy</Link></li>
+        <li><Link to="/myToy">My Toy</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 h-28 mb-4">

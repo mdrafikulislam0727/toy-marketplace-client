@@ -7,6 +7,7 @@ const AddAToy = () => {
         const form =event.target;
 
         const name =form.name.value;
+        const email =form.email.value;
         const seller =form.seller.value;
         const category =form.category.value;
         const price =form.price.value;
@@ -15,7 +16,7 @@ const AddAToy = () => {
         const photo =form.photo.value;
         const rating =form.rating.value;
         const newToyCar ={
-            name,seller,category,price,quantity,details,photo,rating
+            name,email,seller,category,price,quantity,details,photo,rating
         }
 
         fetch('http://localhost:5000/toyCars',{
@@ -120,6 +121,17 @@ const AddAToy = () => {
                     </div>
                 </div>
                 {/* form photo url  row */}
+                {/* form category and details row */}
+                <div className="md:flex mb-8">
+                    <div className="form-control md:w-1/2">
+                        <label className="label">
+                            <span className="label-text">seller email</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="email" placeholder="seller email" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+                </div>
               
                 <input type="submit" value="Add Toy " className="btn btn-block" />
             </form>
