@@ -15,11 +15,13 @@ import AuthProvider from './Providers/AuthProvider';
 import AddAToy from './component/AddAToy/AddAToy';
 import AllToys from './component/AllToys/AllToys';
 import ToyDetails from './component/ToyDetails/ToyDetails';
+import ErrorPage from './component/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
