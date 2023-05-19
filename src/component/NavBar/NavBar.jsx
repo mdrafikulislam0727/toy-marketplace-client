@@ -13,7 +13,7 @@ const NavBar = () => {
     }
     const navItems = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link>All Toy</Link></li>
+        <li><Link to="/allToy">All Toy</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
         <li><Link to="/addToy">Add Toy</Link></li>
     </>

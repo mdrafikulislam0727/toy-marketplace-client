@@ -13,6 +13,8 @@ import Blogs from './component/Blogs/Blogs';
 import SignUp from './component/SignUp/SignUp';
 import AuthProvider from './Providers/AuthProvider';
 import AddAToy from './component/AddAToy/AddAToy';
+import AllToys from './component/AllToys/AllToys';
+import ToyDetails from './component/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
       {
         path:'/addToy',
         element:<AddAToy></AddAToy>
+      },
+      {
+        path:'/allToy',
+        element:<AllToys></AllToys>,
+        loader:() => fetch('http://localhost:5000/toyCars')
+      },
+      {
+        path:'/toyDetails/:id',
+        element:<ToyDetails></ToyDetails>,
+        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
       }
     ]
   },
