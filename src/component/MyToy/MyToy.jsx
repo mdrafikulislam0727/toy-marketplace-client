@@ -12,7 +12,6 @@ const MyToy = () => {
             .then(res => res.json())
             .then(data => setMyToy(data))
     }, [user])
-    console.log(myToys)
     return (
         <div>
             <h2>My toy section : {myToys.length}</h2>
@@ -26,10 +25,12 @@ const MyToy = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
+                            <th>photo</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>details</th>
+                            <th>Price</th>
+                            <th>Update and Delate</th>
                         </tr>
                     </thead>
                     <tbody>

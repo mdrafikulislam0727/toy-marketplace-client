@@ -18,6 +18,7 @@ import ToyDetails from './component/ToyDetails/ToyDetails';
 import ErrorPage from './component/ErrorPage/ErrorPage';
 import MyToy from './component/MyToy/MyToy';
 import PrivateRoute from './routes/PrivateRoute';
+import UpdateToy from './component/UpdateToy/UpdateToy';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
         path:'/myToy',
         element:<PrivateRoute><MyToy></MyToy></PrivateRoute>
         
+      },
+      {
+        path:'/updateToy/:id',
+        element:<UpdateToy></UpdateToy>,
+        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
       }
     ]
   },
