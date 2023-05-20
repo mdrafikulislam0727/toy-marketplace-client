@@ -6,17 +6,18 @@ import icon from '../../assets/loco.png'
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
     console.log(user)
-    const handelLogOut = () =>{
+    const handelLogOut = () => {
         logOut()
-        .then()
-        .catch(error=>console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
     const navItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/allToy">All Toy</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
-        <li><Link to="/addToy">Add Toy</Link></li>
-        <li><Link to="/myToy">My Toy</Link></li>
+        {user && <li><Link to="/addToy">Add Toy</Link></li>}
+        {user && <li><Link to="/myToy">My Toy</Link></li>}
+        
     </>
     return (
         <div className="navbar bg-base-100 h-28 mb-4">
@@ -32,13 +33,13 @@ const NavBar = () => {
                 <Link to="/"><img className="w-24 h-24 rounded-lg" src={icon} alt="" /></Link>
                 <p>thi is name</p>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex ms-5">
                 <ul className="menu menu-horizontal px-1">
                     {navItems}
                 </ul>
             </div>
             <div className="navbar-end">
-                { user ? <img className="w-16 rounded-3xl mr-4" src={user.photoURL} alt="" /> : ''
+                {user ? <img className="w-16 rounded-3xl mr-4" src={user.photoURL} alt="" /> : ''
 
                 }
                 {user ? <button onClick={handelLogOut} className="btn btn-outline btn-secondary">Log Out</button> :

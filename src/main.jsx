@@ -17,6 +17,7 @@ import AllToys from './component/AllToys/AllToys';
 import ToyDetails from './component/ToyDetails/ToyDetails';
 import ErrorPage from './component/ErrorPage/ErrorPage';
 import MyToy from './component/MyToy/MyToy';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/blog',
-        element: <Blogs></Blogs>
+        element:<Blogs></Blogs>
       },
       {
         path: '/signup',
@@ -47,16 +48,17 @@ const router = createBrowserRouter([
       {
         path:'/allToy',
         element:<AllToys></AllToys>,
-        loader:() => fetch('http://localhost:5000/toyCars')
+        loader:() => fetch('https://toy-marketplace-server-ivory.vercel.app/toyCars')
       },
       {
         path:'/toyDetails/:id',
         element:<ToyDetails></ToyDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
+        loader:({params}) => fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${params.id}`)
       },
       {
         path:'/myToy',
-        element:<MyToy></MyToy>
+        element:<PrivateRoute><MyToy></MyToy></PrivateRoute>
+        
       }
     ]
   },
