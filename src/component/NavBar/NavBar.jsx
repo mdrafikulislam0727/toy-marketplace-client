@@ -12,11 +12,11 @@ const NavBar = () => {
             .catch(error => console.log(error))
     }
     const navItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/allToy">All Toy</Link></li>
-        <li><Link to="/blog">Blogs</Link></li>
-        {user && <li><Link to="/addToy">Add Toy</Link></li>}
-        {user && <li><Link to="/myToy">My Toy</Link></li>}
+        <li className="font-bold text-purple-400"><Link to="/">Home</Link></li>
+        <li className="font-bold text-purple-400"><Link to="/allToy">All Toy</Link></li>
+        <li className="font-bold text-purple-400"><Link to="/blog">Blogs</Link></li>
+        {user && <li className="font-bold text-purple-400"><Link to="/addToy">Add Toy</Link></li>}
+        {user && <li className="font-bold text-purple-400"><Link to="/myToy">My Toy</Link></li>}
         
     </>
     return (
@@ -31,7 +31,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <Link to="/"><img className="w-24 h-24 rounded-lg" src={icon} alt="" /></Link>
-                <p>thi is name</p>
+                <p className="text-2xl font-bold ms-3 text-purple-400">ToyCarEmporium</p>
             </div>
             <div className="navbar-center hidden lg:flex ms-5">
                 <ul className="menu menu-horizontal px-1">

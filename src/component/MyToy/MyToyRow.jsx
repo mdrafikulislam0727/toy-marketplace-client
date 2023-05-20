@@ -17,7 +17,7 @@ const MyToyRow = ({ myToy }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/toyCars/${_id}`,{
+                fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars${_id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())
