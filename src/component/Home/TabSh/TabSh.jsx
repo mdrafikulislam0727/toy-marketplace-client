@@ -8,7 +8,7 @@ const TabSh = () => {
   const [activeTab,setActiveTab] =useState("sportscar")
 
   useEffect(()=>{
-    fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${activeTab}`)
+    fetch(`http://localhost:5000/toyCars/category/${activeTab}`)
     .then(res => res.json())
     .then(result =>{
       setToys(result)

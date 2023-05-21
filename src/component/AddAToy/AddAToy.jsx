@@ -19,7 +19,7 @@ const AddAToy = () => {
             name,email,seller,category,price,quantity,details,photo,rating
         }
 
-        fetch('https://toy-marketplace-server-ivory.vercel.app/toyCars',{
+        fetch('http://localhost:5000/toyCars',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

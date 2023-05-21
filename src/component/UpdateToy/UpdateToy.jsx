@@ -21,7 +21,7 @@ const UpdateToy = () => {
             name,category,price,quantity,details,photo,rating
         }
 
-        fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${_id}`,{
+        fetch(`http://localhost:5000/toyCars/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

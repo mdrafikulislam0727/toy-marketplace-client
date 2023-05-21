@@ -1,10 +1,10 @@
-import { useLoaderData } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
+import { useLoaderData } from "react-router-dom";
 
-const ToyDetails = () => {
-    const toyDetails =useLoaderData()
-    const {photo,price,quantity,seller,rating,name,email,details,category} =toyDetails
+const ShopCategoryDetails = () => {
+    const shopCategoryS = useLoaderData()
+    const {price,details,email,photo,quantity,seller,name,rating,category} =shopCategoryS
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
@@ -28,4 +28,4 @@ const ToyDetails = () => {
     );
 };
 
-export default ToyDetails;
+export default ShopCategoryDetails;

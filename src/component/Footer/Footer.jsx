@@ -1,30 +1,32 @@
 import icon from '../../assets/loco.png'
+import { FaFacebookSquare,FaPhone,FaRegEnvelope } from 'react-icons/fa';
+
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
               <img className='w-28' src={icon} alt="" />
-                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p>The toy car is a sleek and shiny <br /> model inspired by classic sports cars</p>
             </div>
             <div>
-                <span className="footer-title">Services</span>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <span className="footer-title">Extras</span>
+                <a className="link link-hover">Gift Cards</a>
+                <a className="link link-hover">HBP Rewards</a>
+                <a className="link link-hover">Comporate Gift Service</a>
+                <a className="link link-hover">It Takes a village Compaign</a>
             </div>
             <div>
-                <span className="footer-title">Company</span>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
+                <span className="footer-title">Customer Care</span>
+                <a className="link link-hover">Find a stare</a>
+                <a className="link link-hover">Contact Us</a>
+                <a className="link link-hover">My Account</a>
+                <a className="link link-hover">Order Status</a>
             </div>
             <div>
-                <span className="footer-title">Legal</span>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
+                <a className='my-4'><FaFacebookSquare /></a>
+                <a className='my-4'><FaPhone/></a>
+                <a><FaRegEnvelope/></a>
+                
             </div>
         </footer>
     );
