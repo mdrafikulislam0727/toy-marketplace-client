@@ -1,6 +1,6 @@
 
 const ShopCart = ({toy}) => {
-    const { name,price,photo,rating}=toy;
+    const { name,price,photo,rating}=toy || {};
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
