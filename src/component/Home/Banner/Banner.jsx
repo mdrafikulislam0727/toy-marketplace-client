@@ -13,7 +13,7 @@ const Banner = () => {
                 <h2 className='text-6xl font-bold'>Welcome my toy car</h2>
                 <p>Rev up the Fun with Our Exciting Collection of Toy Cars Experience Thrilling Adventures with Our High-Speed Toy Car Selection!</p>
                 <div>
-                <button className="btn btn-outline btn-secondary">Latest Project</button>
+                <button className="btn btn-outline btn-secondary">Customize</button>
                 </div>
                </div>
             </div>

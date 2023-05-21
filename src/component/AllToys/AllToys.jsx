@@ -19,6 +19,7 @@ const AllToys = () => {
                     <thead>
                         <tr>
                             <th>Toy Car</th>
+                            <th>Seller Name</th>
                             <th>Toy Name</th>
                             <th>Category</th>
                             <th>price</th>
@@ -30,6 +31,7 @@ const AllToys = () => {
                         {
                             toyCars.map((toyCar) => <tr key={toyCar._id}>
                                 <td><img className="w-32" src={toyCar.photo} alt="" /></td>
+                                <td>{toyCar.seller}</td>
                                 <td>{toyCar.name}</td>
                                 <td>{toyCar.category}</td>
                                 <td>{toyCar.price}</td>
