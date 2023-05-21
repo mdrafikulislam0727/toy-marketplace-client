@@ -65,7 +65,7 @@ const router = createBrowserRouter([
       {
         path:'/updateToy/:id',
         element:<UpdateToy></UpdateToy>,
-        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
+        loader:({params}) => fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${params.id}`)
       },
       {
         path:'/shopByCategory',

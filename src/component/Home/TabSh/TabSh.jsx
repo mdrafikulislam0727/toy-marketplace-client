@@ -13,7 +13,7 @@ const TabSh = () => {
     .then(result =>{
       setToys(result)
     })
-  },[])
+  },[activeTab])
 
   const handelTabClick =(tabName)=>{
     setActiveTab(tabName)
@@ -28,7 +28,8 @@ const TabSh = () => {
           <Tab onClick={()=>handelTabClick("minipolicecar")}>minipolicecar</Tab>
           <Tab onClick={()=>handelTabClick("regularcar")}>regularcar</Tab>
         </TabList>
-        {
+       <div className='w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4'>
+       {
           toys.map(toy=><ShopCart
           key={toy._id}
           toy={toy}
@@ -36,6 +37,7 @@ const TabSh = () => {
 
           </ShopCart>)
         }
+       </div>
       </Tabs>
        </div>
     );

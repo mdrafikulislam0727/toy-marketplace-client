@@ -1,29 +1,45 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
+
 
 const Login = () => {
-    const {signIn} =useContext(AuthContext)
-    const navigate =useNavigate()
-    const location =useLocation()
+    const { signIn } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
     console.log(location)
 
-    const from=location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
-    const handelLogin = event =>{
+    const handelLogin = event => {
         event.preventDefault()
-        const form =event.target;
-        const email =form.email.value;
-        const password =form.password.value;
-        console.log(email,password)
-        signIn(email,password)
-        .then(result=>{
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset();
+                navigate(from, { replace: true })
+            })
+            .catch(error => console.log(error))
+    }
+    const auth =getAuth(app)
+    const provider =new GoogleAuthProvider()
+    const handelGoogleSignIn = () =>{
+        signInWithPopup(auth,provider)
+        .then(result =>{
             const user =result.user;
             console.log(user)
-            form.reset();
-            navigate(from,{ replace: true })
         })
-        .catch(error=>console.log(error))
+        .catch(error =>{
+            console.log(error)
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -49,6 +65,9 @@ const Login = () => {
                             </div>
                         </form>
                         <p className="my-4 text-center">New Toy MarketPlace <Link className="text-orange-600 font-bold" to="/signup">Sing Up</Link></p>
+                        <button onClick={handelGoogleSignIn} className="btn btn-circle btn-outline mx-auto">
+                        <FaGoogle className="w-full text-center" />
+                        </button>
                     </div>
                 </div>
             </div>
