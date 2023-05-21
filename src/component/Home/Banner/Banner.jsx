@@ -29,7 +29,7 @@ const Banner = () => {
                 <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
                 <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                 <div>
-                <button className="btn btn-outline btn-secondary">Latest Project</button>
+                <button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">Latest Project</button>
                 </div>
                </div>
             </div>
@@ -45,7 +45,7 @@ const Banner = () => {
                 <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
                 <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                 <div>
-                <button className="btn btn-outline btn-secondary">Latest Project</button>
+                <button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">Latest Project</button>
                 </div>
                </div>
             </div>
@@ -61,7 +61,7 @@ const Banner = () => {
                 <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
                 <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                 <div>
-                <button className="btn btn-outline btn-secondary">Latest Project</button>
+                <button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">Latest Project</button>
                 </div>
                </div>
             </div>

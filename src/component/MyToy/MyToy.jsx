@@ -7,7 +7,7 @@ const MyToy = () => {
     const { user } = useContext(AuthContext);
     console.log(user)
     const [myToys, setMyToy] = useState([])
-    const url = ` http://localhost:5000/toyCars?email=${user?.email}`;
+    const url = ` https://toy-marketplace-server-ivory.vercel.app/toyCars?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -29,7 +29,7 @@ const MyToy = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/toyCars/${id}`,{
+                fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())
@@ -50,8 +50,7 @@ const MyToy = () => {
         })
     }
     return (
-        <div>
-            <h2>My toy section : {myToys.length}</h2>
+        <div className="my-10">
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

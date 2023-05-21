@@ -50,13 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/allToy',
-        element:<AllToys></AllToys>,
-        loader:() => fetch('http://localhost:5000/toyCars')
+        element:<AllToys></AllToys>
       },
       {
         path:'/toyDetails/:id',
         element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
+        loader:({params}) => fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${params.id}`)
       },
       {
         path:'/myToy',
@@ -66,7 +65,7 @@ const router = createBrowserRouter([
       {
         path:'/updateToy/:id',
         element:<UpdateToy></UpdateToy>,
-        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
+        loader:({params}) => fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${params.id}`)
       },
       {
         path:'/shopByCategory',
@@ -75,7 +74,7 @@ const router = createBrowserRouter([
       {
         path:'/shopCategoryDetails/:id',
         element:<PrivateRoute><ShopCategoryDetails></ShopCategoryDetails></PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
+        loader:({params}) => fetch(`https://toy-marketplace-server-ivory.vercel.app/toyCars/${params.id}`)
       }
     ]
   },

@@ -7,15 +7,15 @@ const ShopCart = ({toy}) => {
     const { name,price,photo,rating,_id}=toy || {};
     console.log(toy)
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mx-auto">
         <figure className="px-10 pt-10">
           <img src={photo} alt="Shoes" className="rounded-xl" />
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">{name}</h2>
-          <p className='font-bold'>Price : {price}</p>
+          <p className='font-bold'>Price : $ {price}</p>
           <p className='flex justify-center items-center gap-3'>
-          <Rating style={{ maxWidth: 150 }} value={Math.round(rating || 0)} readOnly/>
+          <Rating style={{ maxWidth: 150 }} value={(rating)} readOnly/>
           <span className='text-2xl font-bold'>{rating}</span>
           </p>
           <div className="card-actions">

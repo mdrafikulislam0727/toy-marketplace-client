@@ -14,11 +14,11 @@ const ToyDetails = () => {
             <p className="py-2 text-2xl font-bold">Seller Name :{seller}</p>
             <p className="py-2 text-2xl font-bold">Seller Email :{email}</p>
             <p className="py-2 text-2xl font-bold">Category :{category}</p>
-            <p className="py-2 text-2xl font-bold">Price : {price}</p>
+            <p className="py-2 text-2xl font-bold">Price : $ {price}</p>
             <p className="py-2 text-2xl font-bold">Quantity :{quantity}</p>
             <p className="py-2 text-2xl font-bold">{details}</p>
             <p className='flex gap-2 items-center my-2'>
-          <Rating style={{ maxWidth: 200 }} value={Math.round(rating || 0)} readOnly/>
+          <Rating style={{ maxWidth: 200 }} value={(rating || 0)} readOnly/>
           <span className='text-2xl font-bold'>{rating}</span>
           </p>
             <button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">Get Started</button>
