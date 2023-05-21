@@ -21,7 +21,7 @@ const ToyDetails = () => {
           <Rating style={{ maxWidth: 200 }} value={Math.round(rating || 0)} readOnly/>
           <span className='text-2xl font-bold'>{rating}</span>
           </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">Get Started</button>
           </div>
         </div>
       </div>

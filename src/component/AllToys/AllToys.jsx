@@ -36,7 +36,7 @@ const AllToys = () => {
                                 <td>{toyCar.category}</td>
                                 <td>{toyCar.price}</td>
                                 <td>{toyCar.quantity}</td>
-                                <Link to={`/toyDetails/${toyCar._id}`}><button className="btn mt-4">View Details</button>
+                                <Link to={`/toyDetails/${toyCar._id}`}><button className="font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200">View Details</button>
                                 </Link>
                             </tr>)
                         }
